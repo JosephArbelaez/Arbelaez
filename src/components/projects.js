@@ -5,7 +5,7 @@ class Projects extends React.Component {
         return (
             <div>
                 <h1>Projects</h1>
-                
+                <h3>Under Construction</h3>
             </div>
         );
     }

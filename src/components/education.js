@@ -5,6 +5,7 @@ class Education extends React.Component {
         return (
             <div>
                 <h1>Education</h1>
+                <h3>Under Construction</h3>
             </div>
         );
     }
