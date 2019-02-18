@@ -1,37 +1,25 @@
 import React from 'react';
 
-class Navbar extends React.Component {
-    render() {
+const Navbar = ({onNavbarClick}) => {
         return (    
           <div className = "navbar">
             <div>
-                <a href="">
-                    <img 
-                        className ="profileImage" 
-                        src="https://s3.amazonaws.com/arbelaez/Bulbasaur.jpg"
-                        alt="Profile Image"
-                        a>
-                    </img>
-                </a>
+                <img 
+                    className ="profileImage" 
+                    src="https://s3.amazonaws.com/arbelaez/Bulbasaur.jpg"
+                    alt="Profile Image"
+                    onClick = {() => onNavbarClick('about')}>
+                </img>
             </div>
             <div className ="navbarLinks">
-                <a href="" className="link">About</a>
-                <br />
-                <br />
-                <a href="" className="link">Projects</a>
-                <br />
-                <br />
-                <a href="" className="link">Education</a>
-                <br />
-                <br />
-                <a href="" className="link">Skills</a>
-                <br />
-                <br />
-                <a href="" className="link">Interests</a>
+                <h4 className = "link" onClick = {() => onNavbarClick('about')}>About</h4>
+                <h4 className = "link" onClick = {() => onNavbarClick('projects')}>Projects</h4>
+                <h4 className = "link" onClick = {() => onNavbarClick('experience')}>Experience</h4>                <h4 className = "link" onClick = {() => onNavbarClick('education')}>Education</h4>
+                <h4 className = "link" onClick = {() => onNavbarClick('skills')}>Skills</h4>
+                <h4 className = "link" onClick = {() => onNavbarClick('interests')}>Interests</h4>
             </div>
           </div>
       );
-    }
   }
   
   export default Navbar;

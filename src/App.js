@@ -3,9 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
 import Landing from './components/landing';
+import Content from './components/content';
 
 const initialState = {
-  choice: 'empty'
+  choice: 'empty',
+  page: 'about'
 }
 
 class App extends Component {
@@ -27,8 +29,31 @@ class App extends Component {
     }
   }
 
+  onNavbarClick = (page) => {
+    console.log(this.state.choice);
+    console.log(this.state.page);
+    if (page === 'about') {
+      this.setState({page: page});
+    }
+    if (page === 'projects') {
+      this.setState({page: page});
+    }
+    if (page === 'experience') {
+      this.setState({page: page});
+    }
+    if (page === 'skills') {
+      this.setState({page: page});
+    }
+    if (page === 'education') {
+      this.setState({page: page});
+    }
+    if (page === 'interests') {
+      this.setState({page: page});
+    }
+  }
+  
   render() {
-    const { choice } = this.state;
+    const { choice , page } = this.state;
     return (
       <div className="App">
           {
@@ -39,7 +64,10 @@ class App extends Component {
                 /> 
               ) : choice === 'home' ?
               (
-                <Navbar />
+                <div>
+                  <Navbar onNavbarClick={this.onNavbarClick}/>
+                  <Content page={this.state.page}/>
+                </div>
               )  : 
               (
                 <div>
