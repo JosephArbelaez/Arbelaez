@@ -1,6 +1,6 @@
 import React from 'react';
 import SkillBar from 'react-skillbars';
-import skills from '../skills.json';
+import skills from '../jsons/skills.json';
 
 class Skills extends React.Component {
     colors = {

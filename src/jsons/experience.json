@@ -1,0 +1,26 @@
+[
+    {
+        "company" : "Walmart / Cognizant",
+        "role" : "Support Analyst",
+        "location"  : "Bentonville, AR",
+        "dates" : "June 2018 - Present",
+        "feature" : [
+            {"bullet" : "Investigated client XML feeds to determine errors with 1P supplier onboarding via the API."},
+            {"bullet" : "Lead Warehouse Suppliers and Drop Ship Vendors through the process of integrating their items to the Walmart.com website."},
+            {"bullet" : "Monitored the resolution of forum posts within our Developer Forum."},
+            {"bullet" : "Managed a large queue of case tickets using Salesforce."}
+        ]
+    },
+    {
+        "company" : "Revature",
+        "role" : "Full Stack Web Developer",
+        "location"  : "New York, NY",
+        "dates" : "February 2018 - Present",
+        "feature" : [
+            {"bullet" : "Developed an expense reimbursement web application in HTML, CSS, and JavaScript that stored user information in an Oracle Database."},
+            {"bullet" : "Collaborated with a team to construct a RESTful, social media web application from the back to the front-end."},
+            {"bullet" : "Refactored a previous, live business application to accept newly constructed endpoints."},
+            {"bullet" : "Assessed the functionality of the service and control layer using Junit and RESTAssured."}
+        ]
+    }
+]
