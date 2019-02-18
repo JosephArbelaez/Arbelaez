@@ -1,25 +1,52 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar';
+import Landing from './components/landing';
+
+const initialState = {
+  choice: 'empty'
+}
 
 class App extends Component {
+  
+  constructor() {
+    super();
+    this.state = initialState;
+  }
+
+  onChoiceButtonClick = (choice) => {
+    if (choice === 'empty') {
+      this.setState({choice: choice});
+    }
+    if (choice === 'game') {
+      this.setState({choice: choice});
+    } 
+    if (choice === 'home') {
+      this.setState({choice: choice});
+    }
+  }
+
   render() {
+    const { choice } = this.state;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          {
+            choice ==='empty' ?
+              ( 
+                <Landing 
+                  onChoiceButtonClick={this.onChoiceButtonClick}
+                /> 
+              ) : choice === 'home' ?
+              (
+                <Navbar />
+              )  : 
+              (
+                <div>
+                </div>
+              )
+          }
+          
       </div>
     );
   }
