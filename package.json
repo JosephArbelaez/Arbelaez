@@ -7,7 +7,8 @@
     "react-bootstrap-table": "^4.3.1",
     "react-dom": "^16.8.2",
     "react-scripts": "2.1.5",
-    "react-skillbars": "^1.5.1"
+    "react-skillbars": "^1.5.1",
+    "tachyons": "^4.11.1"
   },
   "scripts": {
     "start": "react-scripts start",

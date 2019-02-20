@@ -4,6 +4,8 @@ import './App.css';
 import Navbar from './components/navbar';
 import Landing from './components/landing';
 import Content from './components/content';
+import Scroll from './components/functionality/scroll';
+import ErrorBoundary from './components/functionality/errorBoundary';
 
 const initialState = {
   choice: 'empty',
@@ -66,7 +68,11 @@ class App extends Component {
               (
                 <div>
                   <Navbar onNavbarClick={this.onNavbarClick}/>
-                  <Content page={this.state.page}/>
+                  <Scroll>
+                    <ErrorBoundary>
+                      <Content page={this.state.page}/>
+                    </ErrorBoundary>
+                  </Scroll>
                 </div>
               )  : 
               (
