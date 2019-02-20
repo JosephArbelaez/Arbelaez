@@ -6,6 +6,7 @@ import Landing from './components/landing';
 import Content from './components/content';
 import Scroll from './components/functionality/scroll';
 import ErrorBoundary from './components/functionality/errorBoundary';
+import 'tachyons';
 
 const initialState = {
   choice: 'empty',

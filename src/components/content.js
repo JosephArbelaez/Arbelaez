@@ -4,14 +4,16 @@ import Projects from './projects/projects'
 import Education from './education';
 import Skills from './skills';
 import Interests from './interests';
-import Experience from './experience';
+import Experience from './experience/experience';
 import { projects } from './projects/projectList';
+import { experiences } from './experience/experienceList';
 
 class Content extends React.Component {
     constructor() {
         super();
         this.state = {
-            projects: projects
+            projects: projects,
+            experiences: experiences
         }
     }
     render (){
@@ -30,7 +32,7 @@ class Content extends React.Component {
                         ) :
                         this.props.page === 'experience' ? 
                         (
-                            <Experience />
+                            <Experience experiences={experiences}/>
                         ) :
                         this.props.page === 'education' ? 
                         (
