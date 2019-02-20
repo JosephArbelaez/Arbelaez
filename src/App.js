@@ -58,7 +58,7 @@ class App extends Component {
   render() {
     const { choice , page } = this.state;
     return (
-      <div className="App">
+      <div>
           {
             choice ==='empty' ?
               ( 

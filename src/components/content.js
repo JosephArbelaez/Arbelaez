@@ -23,7 +23,7 @@ class Content extends React.Component {
     render (){
         const { projects } = this.state;
         return (
-                <div className="">
+                <div>
                     {
                         this.props.page === 'about' ? 
                         (
