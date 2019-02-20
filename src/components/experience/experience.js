@@ -4,7 +4,7 @@ import ExperienceCard from './experienceCard';
 const Experience = ({experiences}) => {
 
         return (
-            <div className="expPage" >
+            <div className="tc" >
                 <div className="expHeader">
                     <h1>Experience</h1>
                     {
