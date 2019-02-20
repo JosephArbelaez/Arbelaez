@@ -7,6 +7,10 @@ import Interests from './interests';
 import Experience from './experience/experience';
 import { projects } from './projects/projectList';
 import { experiences } from './experience/experienceList';
+import Scroll from './functionality/scroll';
+import ReactDOM from 'react-dom'
+import ScrollArea from 'react-scrollbar';
+import ErrorBoundary from './functionality/errorBoundary';
 
 class Content extends React.Component {
     constructor() {
@@ -19,8 +23,7 @@ class Content extends React.Component {
     render (){
         const { projects } = this.state;
         return (
-            <div>
-                <div className="content">
+                <div className="">
                     {
                         this.props.page === 'about' ? 
                         (
@@ -28,7 +31,9 @@ class Content extends React.Component {
                         ) :
                         this.props.page === 'projects' ? 
                         (
+
                             <Projects projects={projects}/>
+
                         ) :
                         this.props.page === 'experience' ? 
                         (
@@ -47,8 +52,8 @@ class Content extends React.Component {
                             <Interests />
                         ) : <div> </div>
                     }
+
                 </div>
-            </div>
         )
     }
 }

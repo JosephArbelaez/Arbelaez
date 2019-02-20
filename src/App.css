@@ -14,7 +14,7 @@
   margin-right: 2%;
 }
 .name{
-  margin-top: 10%;
+  margin-top: 15%;
   margin-left: 5%;
   margin-bottom: 0px;
   margin-right: 0px;
@@ -88,9 +88,8 @@
 }
 
 .content {
- position: fixed;
  top: 0;
- left: 15%;
+ left: 10%;
  height: 100%;
  width: 85%;
 }

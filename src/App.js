@@ -4,7 +4,7 @@ import './App.css';
 import Navbar from './components/navbar';
 import Landing from './components/landing';
 import Content from './components/content';
-import Scroll from './components/functionality/scroll';
+import ScrollArea from 'react-scrollbar';
 import ErrorBoundary from './components/functionality/errorBoundary';
 import 'tachyons';
 
@@ -69,11 +69,16 @@ class App extends Component {
               (
                 <div>
                   <Navbar onNavbarClick={this.onNavbarClick}/>
-                  <Scroll>
-                    <ErrorBoundary>
-                      <Content page={this.state.page}/>
-                    </ErrorBoundary>
-                  </Scroll>
+                  <ScrollArea
+                                speed={0.8}
+                                className="content"
+                                contentClassName="content"
+                                horizontal={false}
+                                >
+                                <ErrorBoundary>
+                  <Content page={this.state.page}/>
+                  </ErrorBoundary>
+                            </ScrollArea>
                 </div>
               )  : 
               (
