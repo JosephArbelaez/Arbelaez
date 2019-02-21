@@ -155,11 +155,12 @@
     text-align: center;
   }
   .content{
-    top: 10%;
+    top: 0%;
     left: 0;
     height: 90%;
     width:100%;
-    z-index: -1;
+    margin-top: 15%;
+    z-index: 0;
   }
   .description {
     margin-left: 0%;

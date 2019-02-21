@@ -1,16 +1,14 @@
 import React from 'react';
 import About from './about';
 import Projects from './projects/projects'
-import Education from './education';
+import Education from './education/education';
 import Skills from './skills';
 import Interests from './interests';
 import Experience from './experience/experience';
 import { projects } from './projects/projectList';
 import { experiences } from './experience/experienceList';
-import Scroll from './functionality/scroll';
-import ReactDOM from 'react-dom'
-import ScrollArea from 'react-scrollbar';
-import ErrorBoundary from './functionality/errorBoundary';
+import { education } from './education/educationList';
+
 
 class Content extends React.Component {
     constructor() {
@@ -41,7 +39,7 @@ class Content extends React.Component {
                         ) :
                         this.props.page === 'education' ? 
                         (
-                            <Education />
+                            <Education education={education}/>
                         ) :
                         this.props.page === 'skills' ? 
                         (
