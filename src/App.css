@@ -124,6 +124,10 @@
   margin-left: 5%;
 }
 
+.skillbars {
+  margin-top:10%;
+}
+
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
   .navbar{

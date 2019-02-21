@@ -11,7 +11,8 @@ import 'tachyons';
 const initialState = {
   choice: 'empty',
   page: 'about',
-  disp: 'block'
+  disp: 'block',
+  profileImageDisplay: 'inline'
 }
 
 class App extends Component {
@@ -62,26 +63,38 @@ class App extends Component {
     console.log(this.state.page);
     if (page === 'about') {
       this.setState({page: page});
+      this.setState({disp: "none"});
+      this.setState({profileImageDisplay: "inline" });
     }
     if (page === 'projects') {
       this.setState({page: page});
+      this.setState({disp: "none"});
+      this.setState({profileImageDisplay: "none" });
     }
     if (page === 'experience') {
       this.setState({page: page});
+      this.setState({disp: "none"});
+      this.setState({profileImageDisplay: "none" });
     }
     if (page === 'skills') {
       this.setState({page: page});
+      this.setState({disp: "none"});
+      this.setState({profileImageDisplay: "none" });
     }
     if (page === 'education') {
       this.setState({page: page});
+      this.setState({disp: "none"});
+      this.setState({profileImageDisplay: "none" });
     }
     if (page === 'interests') {
       this.setState({page: page});
+      this.setState({disp: "none"});
+      this.setState({profileImageDisplay: "none" });
     }
   }
 
   render() {
-    const { choice , page, disp} = this.state;
+    const { choice , page, disp, profileImageDisplay} = this.state;
     return (
       <div>
           {
@@ -93,7 +106,7 @@ class App extends Component {
               ) : choice === 'home' ?
               (
                 <div>
-                  <Navbar onNavbarClick={this.onNavbarClick} toggleHidden={this.toggleHidden} display={this.state.disp}/>
+                  <Navbar onNavbarClick={this.onNavbarClick} toggleHidden={this.toggleHidden} display={this.state.disp} profileImageDisplay={this.state.profileImageDisplay}/>
                   <ScrollArea
                                 speed={0.8}
                                 className="content"
@@ -101,7 +114,7 @@ class App extends Component {
                                 horizontal={false}
                                 >
                                 <ErrorBoundary>
-                  <Content page={this.state.page}/>
+                  <Content page={this.state.page} />
                   </ErrorBoundary>
                             </ScrollArea>
                 </div>

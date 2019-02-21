@@ -12,7 +12,7 @@ class Skills extends React.Component {
     }
     render(){
         return (
-            <div>
+            <div className="skillbars">
                 <h1>Skills</h1>
                 <SkillBar skills={skills} colors = {this.colors}/>
             </div>

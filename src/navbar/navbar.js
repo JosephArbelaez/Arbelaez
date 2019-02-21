@@ -2,7 +2,7 @@ import React from 'react';
 import Links from './navbarLinks';
 import Menu from './menuButton';
 
-const Navbar = ({onNavbarClick, toggleHidden, display}) => {
+const Navbar = ({onNavbarClick, toggleHidden, display, profileImageDisplay}) => {
         return (    
           <div className = "navbar">
             <div>
@@ -10,7 +10,8 @@ const Navbar = ({onNavbarClick, toggleHidden, display}) => {
                     className ="profileImage" 
                     src="https://s3.amazonaws.com/arbelaez/Bulbasaur.jpg"
                     alt="Profile"
-                    onClick = {() => onNavbarClick('about')}>
+                    onClick = {() => onNavbarClick('about')}
+                    style={{display: profileImageDisplay}}>
                 </img>
             </div>
             <Links onNavbarClick={onNavbarClick} display = {display}/>
