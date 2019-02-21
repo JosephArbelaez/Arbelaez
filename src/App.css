@@ -66,7 +66,8 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 15%;
+  width: 20%;
+  z-index: 1;
 }
 .profileImage {
   border-radius: 15%;
@@ -77,9 +78,10 @@
   cursor: pointer;
 }
 .navbarLinks {
-  margin-top: 20%;
-  font-size: 1.5rem;
+  margin-top: 10%;
+  font-size: 1.25rem;
   font-weight: 600px;
+  display: block;
 }
 .link {
   text-decoration: none;
@@ -90,6 +92,19 @@
 .link:hover {
   color: aqua;
   text-decoration: underline;
+}
+.menu{
+  background: #407899;
+  top: 2%;
+  left: 2%;
+  position: fixed;
+  visibility: hidden;
+}
+.bar{
+  background: white;
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
 }
 
 /* Content */
@@ -109,33 +124,81 @@
   margin-left: 5%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   /* For mobile phones: */
   .navbar{
     width: 100%;
-    height: 10%;
+    height: 9%;
     top: 0;
     left: 0;
   }
   .name {
-    margin-top: 60%;
+    margin-top: 70%;
     font-size: 1.25rem;
     text-align: center;
-    width: 100%;
+    margin-bottom: 0%;
+    margin-right: 0%;
   }
   .profileImage{
-    margin-top: 15%;
+    margin-top: 25%;
+    border: .25em solid #407899;
+    cursor: pointer;
+    text-align: center;
+  }
+  .personalInfo {
+    margin-left: 0%;
+    margin-top: 0%;
+    text-align: center;
   }
   .content{
     top: 10%;
     left: 0;
     height: 90%;
     width:100%;
+    z-index: -1;
   }
-  .icon1{
-    margin-left: 45%;
+  .description {
+    margin-left: 0%;
+    text-align: center;
+    font-style: italic;
+  }
+  .icon{
+    margin-left: 0;
+    margin-right: 2%;
+  }
+  .icons{
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
   }
   .navbarLinks{
-
+    top:0;
+    left:0;
+    width: 100%;
+    position: fixed;
+    font-size: 1.25rem;
+    font-weight: 600px;
+    z-index: 1;
+    background-color:  #407899;
+  }
+  .link{
+    color:  rgba(255, 255, 255, 1);;
+    z-index: 2;
+  }
+  .menu{
+    background: #407899;
+    top: 2%;
+    left: 2%;
+    position: fixed;
+    visibility: visible;
+    z-index: 2;
+  }
+  .bar{
+    background: white;
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+    visibility: visible;
+    z-index: 2;
   }
 }

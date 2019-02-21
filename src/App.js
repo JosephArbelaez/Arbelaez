@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Navbar from './components/navbar';
+import Navbar from './navbar/navbar';
 import Landing from './components/landing';
 import Content from './components/content';
 import ScrollArea from 'react-scrollbar';
@@ -10,7 +10,8 @@ import 'tachyons';
 
 const initialState = {
   choice: 'empty',
-  page: 'about'
+  page: 'about',
+  disp: 'block'
 }
 
 class App extends Component {
@@ -20,6 +21,30 @@ class App extends Component {
     this.state = initialState;
   }
 
+  updateDimensions () {
+    if(window.innerWidth < 800){
+      this.setState({disp:'none'});
+    } else {
+      this.setState({disp:'block'});
+    }
+  }
+
+  toggleHidden = () => {
+    if (this.state.disp === 'block'){
+      this.setState({disp:'none'});
+    } 
+    if (this.state.disp === 'none'){
+      this.setState({disp:'block'});
+    }
+    if (this.state.disp === ''){
+      this.setState({disp:'none'});
+    }
+    console.log(this.state.disp);
+  }
+  componentDidMount() {
+    this.updateDimensions();
+    window.addEventListener("resize", this.updateDimensions.bind(this));
+  }
   onChoiceButtonClick = (choice) => {
     if (choice === 'empty') {
       this.setState({choice: choice});
@@ -54,9 +79,9 @@ class App extends Component {
       this.setState({page: page});
     }
   }
-  
+
   render() {
-    const { choice , page } = this.state;
+    const { choice , page, disp} = this.state;
     return (
       <div>
           {
@@ -68,7 +93,7 @@ class App extends Component {
               ) : choice === 'home' ?
               (
                 <div>
-                  <Navbar onNavbarClick={this.onNavbarClick}/>
+                  <Navbar onNavbarClick={this.onNavbarClick} toggleHidden={this.toggleHidden} display={this.state.disp}/>
                   <ScrollArea
                                 speed={0.8}
                                 className="content"
