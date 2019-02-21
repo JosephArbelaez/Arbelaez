@@ -40,12 +40,13 @@ class App extends Component {
     if (this.state.disp === ''){
       this.setState({disp:'none'});
     }
-    console.log(this.state.disp);
   }
+
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
+
   onChoiceButtonClick = (choice) => {
     if (choice === 'empty') {
       this.setState({choice: choice});
@@ -59,37 +60,62 @@ class App extends Component {
   }
 
   onNavbarClick = (page) => {
-    console.log(this.state.choice);
-    console.log(this.state.page);
     if (page === 'about') {
       this.setState({page: page});
-      this.setState({disp: "none"});
-      this.setState({profileImageDisplay: "inline" });
+      if (window.innerWidth < 800){
+        this.setState({disp: "none"});
+        this.setState({profileImageDisplay: "inline" });
+      }
     }
     if (page === 'projects') {
       this.setState({page: page});
-      this.setState({disp: "none"});
-      this.setState({profileImageDisplay: "none" });
+      if (window.innerWidth < 800){
+        this.setState({disp: "none"});
+        this.setState({profileImageDisplay: "none" });
+      }
+      if (window.innerWidth > 800){
+        this.setState({profileImageDisplay: "inline" });
+      }
     }
     if (page === 'experience') {
       this.setState({page: page});
-      this.setState({disp: "none"});
-      this.setState({profileImageDisplay: "none" });
+      if (window.innerWidth < 800){
+        this.setState({disp: "none"});
+        this.setState({profileImageDisplay: "none" });
+      }
+      if (window.innerWidth > 800){
+        this.setState({profileImageDisplay: "inline" });
+      }
     }
     if (page === 'skills') {
       this.setState({page: page});
-      this.setState({disp: "none"});
-      this.setState({profileImageDisplay: "none" });
+      if (window.innerWidth < 800){
+        this.setState({disp: "none"});
+        this.setState({profileImageDisplay: "none" });
+      }
+      if (window.innerWidth > 800){
+        this.setState({profileImageDisplay: "inline" });
+      }
     }
     if (page === 'education') {
       this.setState({page: page});
-      this.setState({disp: "none"});
-      this.setState({profileImageDisplay: "none" });
+      if (window.innerWidth < 800){
+        this.setState({disp: "none"});
+        this.setState({profileImageDisplay: "none" });
+      }
+      if (window.innerWidth > 800){
+        this.setState({profileImageDisplay: "inline" });
+      }
     }
     if (page === 'interests') {
       this.setState({page: page});
-      this.setState({disp: "none"});
-      this.setState({profileImageDisplay: "none" });
+      if (window.innerWidth < 800){
+        this.setState({disp: "none"});
+        this.setState({profileImageDisplay: "none" });
+      }
+      if (window.innerWidth > 800){
+        this.setState({profileImageDisplay: "inline" });
+      }
     }
   }
 
@@ -113,10 +139,10 @@ class App extends Component {
                                 contentClassName="content"
                                 horizontal={false}
                                 >
-                                <ErrorBoundary>
-                  <Content page={this.state.page} />
-                  </ErrorBoundary>
-                            </ScrollArea>
+                    <ErrorBoundary>
+                      <Content page={this.state.page} />
+                    </ErrorBoundary>
+                  </ScrollArea>
                 </div>
               )  : 
               (
@@ -124,7 +150,6 @@ class App extends Component {
                 </div>
               )
           }
-          
       </div>
     );
   }
