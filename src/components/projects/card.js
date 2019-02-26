@@ -19,7 +19,8 @@ const Card = ({name, picture}) => {
                         <p>123456789012345678901234567890</p>
                         <p>123456789012345678901234567890</p>
                         <p>123456789012345678901234567890</p> 
-                    <img src='https://s3.amazonaws.com/arbelaez/github48.png'></img>
+                    <button className="projectButton"> 
+                        <p className="projectButtonText">GitHub</p> <img src='https://s3.amazonaws.com/arbelaez/GitHub48+Inverted.png'></img> </button>
                     </div>
                 </div>
     );
