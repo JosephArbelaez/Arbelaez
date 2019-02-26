@@ -29,9 +29,7 @@ class Content extends React.Component {
                         ) :
                         this.props.page === 'projects' ? 
                         (
-
                             <Projects projects={projects}/>
-
                         ) :
                         this.props.page === 'experience' ? 
                         (
@@ -50,7 +48,6 @@ class Content extends React.Component {
                             <Interests />
                         ) : <div> </div>
                     }
-
                 </div>
         )
     }

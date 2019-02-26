@@ -14,9 +14,6 @@ const ExperienceCard = ({role, company, details, dates, location}) => {
                         <p className="mv0 i">{dates}</p>
                         <p className="">{details}</p>
                     </div>
-                    
-                    
-                    
                 </div>
     );
 }

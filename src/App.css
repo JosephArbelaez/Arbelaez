@@ -88,6 +88,7 @@
   margin-top: 0%;
 }
 
+
 /* Navbar */
 .navbar {
   background: #407899;
@@ -146,19 +147,17 @@
  height: 100%;
  width: 85%;
 }
-
 .lastname {
   color: aqua;
 }
-
 .subheading {
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin-left: 5%;
 }
-
 .skillbars {
   margin-top:10%;
 }
+
 
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
