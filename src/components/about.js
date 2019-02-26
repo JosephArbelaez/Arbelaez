@@ -16,7 +16,6 @@ class About extends React.Component {
                     has placed me into two scholastic honor societies, an internship and propelled me through the
                     Revature coding boot camp.</p>
                 </div>
-                <br />
                 <div className="icons">
                     <a className = "icon" href="https://www.linkedin.com/in/joseph-arbelaez-a064708b/">
                     <img src="https://s3.amazonaws.com/arbelaez/linkedin48.png" ></img>
