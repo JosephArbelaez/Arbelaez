@@ -8,10 +8,10 @@
   background: #407899;
   height: 75px;
   width: 200px;
-  color: rgba(65, 230, 190, .6);
+  color: white;
   font-size: 2em;
   border-width: 2px;
-  border-color:  rgba(65, 230, 190, .6);
+  border-color:  white;
   border-radius: 50%;
   margin-bottom: 5%;
 }
@@ -181,10 +181,10 @@
     background: #407899;
     height: 75px;
     width: 200px;
-    color: rgba(65, 230, 190, .6);
+    color: white;
     font-size: 2em;
     border-width: 2px;
-    border-color:  rgba(65, 230, 190, .6);
+    border-color:  white;
     border-radius: 50%;
     margin-bottom: 5%;
   }
