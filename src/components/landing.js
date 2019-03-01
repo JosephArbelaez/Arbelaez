@@ -3,10 +3,12 @@ import React from 'react';
 const Landing = ({onChoiceButtonClick}) => {
 
     return (
-        <div className="tc v-mid">
-            <h1>Welcome to my Portfolio Page</h1>
-            <button className="button"onClick = {() => onChoiceButtonClick('game')}>Game</button>
-            <button className="button"onClick = {() => onChoiceButtonClick('home')}>Enter</button>
+        <div className="landingPage">
+            <h1 className="landingName">Joseph Arbelaez</h1>
+            <div className="buttons">
+                <button className="buttonEnter" onClick = {() => onChoiceButtonClick('home')}>Enter</button>
+                <button className="buttonGame" onClick = {() => onChoiceButtonClick('game')}>Game</button>
+            </div>
         </div>
     );
 }

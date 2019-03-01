@@ -5,7 +5,6 @@ const Experience = ({experiences}) => {
 
         return (
             <div className="tc" >
-                <div className="expHeader">
                     <h1>Experience</h1>
                     {
                         experiences.map((experience, i) => {
@@ -20,7 +19,6 @@ const Experience = ({experiences}) => {
                             );
                         })
                     }
-                </div>
             </div>
         )
     }

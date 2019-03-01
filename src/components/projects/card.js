@@ -16,7 +16,11 @@ const Card = ({name, picture}) => {
                     <img src='https://s3.amazonaws.com/arbelaez/html48.png'></img>
                     <img src='https://s3.amazonaws.com/arbelaez/css48.png'></img>
                     <img src='https://s3.amazonaws.com/arbelaez/js48.png'></img>
-                        <p>12345678901234567890123456789012345</p> 
+                        <p>123456789012345678901234567890</p>
+                        <p>123456789012345678901234567890</p>
+                        <p>123456789012345678901234567890</p> 
+                    <button className="projectButton"> 
+                        <p className="projectButtonText">GitHub</p> <img src='https://s3.amazonaws.com/arbelaez/GitHub48+Inverted.png'></img> </button>
                     </div>
                 </div>
     );
