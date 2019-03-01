@@ -7,6 +7,7 @@ import Content from './components/content';
 import ScrollArea from 'react-scrollbar';
 import ErrorBoundary from './components/functionality/errorBoundary';
 import 'tachyons';
+import Game from "./components/game/game";
 
 const initialState = {
   choice: 'empty',
@@ -146,8 +147,7 @@ class App extends Component {
                 </div>
               )  : 
               (
-                <div>
-                </div>
+                <Game />
               )
           }
       </div>
