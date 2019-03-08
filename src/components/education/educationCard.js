@@ -4,7 +4,7 @@ const EduCard = ({degree, institution, gpa, description, date, location}) => {
 
     return (
                 <div className = "bg-white v-base hover-bg-lightest-blue dib br3 pa3 ma2 bw2 shadow-5 tl">
-                    <h4 classname = "mv0">{degree}</h4>
+                    <p classname = "degree">{degree}</p>
                     <p className = "mv0 i">{institution}</p>
                     <p className = "mv0 i">{gpa}</p>
                     <p className = "mv0 i">{date}</p>

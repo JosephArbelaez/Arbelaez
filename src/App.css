@@ -177,6 +177,9 @@
   margin-bottom: 0%;
   margin-top: 5%;
 }
+.degree {
+ margin: 0%;
+}
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
   /* Landing Page */

@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Card = ({name, picture}) => {
+const Card = ({name, picture, icon1, icon2, icon3, icon4, icon5, icon6, link, p1, p2, p3}) => {
     /* 
-        Max 35 characters for the text portion.
+        Max 30 characters for the text portion.
         6 icons
     */
     return (
@@ -10,17 +10,21 @@ const Card = ({name, picture}) => {
                     <h2>{name}</h2>
                     <img src={picture}></img>
                     <div>
-                    <img src='https://s3.amazonaws.com/arbelaez/html48.png'></img>
-                    <img src='https://s3.amazonaws.com/arbelaez/css48.png'></img>
-                    <img src='https://s3.amazonaws.com/arbelaez/js48.png'></img>
-                    <img src='https://s3.amazonaws.com/arbelaez/html48.png'></img>
-                    <img src='https://s3.amazonaws.com/arbelaez/css48.png'></img>
-                    <img src='https://s3.amazonaws.com/arbelaez/js48.png'></img>
-                        <p>123456789012345678901234567890</p>
-                        <p>123456789012345678901234567890</p>
-                        <p>123456789012345678901234567890</p> 
-                    <button className="projectButton"> 
-                        <p className="projectButtonText">GitHub</p> <img src='https://s3.amazonaws.com/arbelaez/GitHub48+Inverted.png'></img> </button>
+                    <img src={icon1}></img>
+                    <img src={icon2}></img>
+                    <img src={icon3}></img>
+                    <img src={icon4}></img>
+                    <img src={icon5}></img>
+                    <img src={icon6} ></img>
+                        <p>{p1}</p>
+                        <p>{p2}</p>
+                        <p>{p3}</p> 
+                    <a href={link}> 
+                        <button className="projectButton"> 
+                            <p className="projectButtonText">GitHub</p> 
+                                    <img src='https://s3.amazonaws.com/arbelaez/GitHub48+Inverted.png'></img>
+                        </button>
+                    </a> 
                     </div>
                 </div>
     );
