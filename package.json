@@ -9,6 +9,7 @@
     "react-scripts": "2.1.5",
     "react-scrollbar": "^0.5.4",
     "react-skillbars": "^1.5.1",
+    "react-unity-webgl": "^7.0.9",
     "tachyons": "^4.11.1"
   },
   "scripts": {
