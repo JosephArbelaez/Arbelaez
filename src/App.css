@@ -180,6 +180,48 @@
 .degree {
  margin: 0%;
 }
+.thumbnail {
+  cursor: zoom-in;
+}
+.lightbox {
+  position: relative;
+  margin-top: 5%;
+}
+.lightboxImage{
+  height: 500px;
+  width: 500px;
+}
+.lightboxButton {
+  background-color: white;
+  text-align: center;
+  border: 5px;
+  border-style: solid;
+  border-radius: 16px;
+  border-color: #407899;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #407899;
+  font-size: 36px;
+  margin-bottom: 0%;
+  margin-top: 5%;
+  padding: 1%;
+}
+
+/* Interests */
+.progress-bar {
+  position: relative;
+  height: 20px;
+  width: 350px;
+  border-radius: 50px;
+  border: 1px solid #333;
+}
+.filler {
+  background: #407899;
+  height: 100%;
+  border-radius: inherit;
+  transition: width 2s ease-in;
+}
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
   /* Landing Page */
@@ -226,7 +268,7 @@
     left: 0;
   }
   .name {
-    margin-top: 70%;
+    margin-top: 20%;
     font-size: 1.25rem;
     text-align: center;
     margin-bottom: 0%;
@@ -294,5 +336,9 @@
     margin: 6px 0;
     visibility: visible;
     z-index: 2;
+  }
+  .lightboxImage{
+    height: 80%;
+    width: 80%;
   }
 }

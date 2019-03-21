@@ -1,6 +1,5 @@
 import React from 'react';
 import Links from './navbarLinks';
-import Menu from './menuButton';
 
 const Navbar = ({onNavbarClick, toggleHidden, display, profileImageDisplay}) => {
         return (    

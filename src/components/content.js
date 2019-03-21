@@ -15,11 +15,13 @@ class Content extends React.Component {
         super();
         this.state = {
             projects: projects,
-            experiences: experiences
+            experiences: experiences,
         }
     }
-    render (){
-        const { projects } = this.state;
+
+
+
+    render() {
         return (
                 <div>
                     {

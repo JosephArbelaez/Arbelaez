@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './navbar/navbar';
 import Landing from './components/landing';
@@ -7,13 +6,13 @@ import Content from './components/content';
 import ScrollArea from 'react-scrollbar';
 import ErrorBoundary from './components/functionality/errorBoundary';
 import 'tachyons';
-import Game from "./components/game/game";
 
 const initialState = {
   choice: 'empty',
   page: 'about',
   disp: 'block',
-  profileImageDisplay: 'inline'
+  profileImageDisplay: 'inline',
+
 }
 
 class App extends Component {
@@ -26,8 +25,10 @@ class App extends Component {
   updateDimensions () {
     if(window.innerWidth < 800){
       this.setState({disp:'none'});
+      this.setState({profileImageDisplay: 'none'});
     } else {
       this.setState({disp:'block'});
+      this.setState({profileImageDisplay: 'inline'});
     }
   }
 
@@ -121,7 +122,7 @@ class App extends Component {
   }
 
   render() {
-    const { choice , page, disp, profileImageDisplay} = this.state;
+    const { choice , page, disp, profileImageDisplay, lightboxDisplay} = this.state;
     return (
       <div>
           {
@@ -141,13 +142,13 @@ class App extends Component {
                                 horizontal={false}
                                 >
                     <ErrorBoundary>
-                      <Content page={this.state.page} />
+                      <Content page={this.state.page} onThumbnailClick={this.onThumbnailClick} closeThumbnail={this.closeThumbnail} lightboxDisplay={this.state.lightboxDisplay}/>
                     </ErrorBoundary>
                   </ScrollArea>
                 </div>
               )  : 
               (
-                <Game />
+                <div></div>
               )
           }
       </div>
