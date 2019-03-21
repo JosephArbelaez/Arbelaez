@@ -66,6 +66,9 @@ class App extends Component {
       this.setState({page: page});
       if (window.innerWidth < 800){
         this.setState({disp: "none"});
+        this.setState({profileImageDisplay: "none" });
+      }
+      if (window.innerWidth > 800){
         this.setState({profileImageDisplay: "inline" });
       }
     }
