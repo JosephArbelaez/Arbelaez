@@ -7,7 +7,7 @@ class Skills extends React.Component {
         bar: 'aqua',
         title: {
             text: 'white',
-            background: '#41D3BD'
+            background: '#407899'
         }
     }
     render(){

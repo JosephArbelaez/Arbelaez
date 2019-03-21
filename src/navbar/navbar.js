@@ -7,7 +7,7 @@ const Navbar = ({onNavbarClick, toggleHidden, display, profileImageDisplay}) => 
             <div>
                 <img 
                     className ="profileImage" 
-                    src="https://s3.amazonaws.com/arbelaez/Bulbasaur.jpg"
+                    src="https://s3.amazonaws.com/arbelaez/ProfileImage.jpg"
                     alt="Profile"
                     onClick = {() => onNavbarClick('about')}
                     style={{display: profileImageDisplay}}>

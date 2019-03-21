@@ -1,30 +1,30 @@
 [
     {
-      "type": "Java",
+      "type": "HTML",
       "level": 100
     },
     {
-      "type": "React",
+      "type": "CSS",
       "level": 85
     },
     {
       "type": "Javascript",
-      "level": 75
+      "level": 70
     },
     {
-      "type": "Spring",
-      "level": 50
+      "type": "SQL",
+      "level": 70
     },
     {
-      "type": "Docker",
-      "level": 25
+      "type": "React.js",
+      "level": 60
     },
     {
-      "type": "HTML",
-      "level": 20
+      "type": "Java",
+      "level": 70
     },
     {
-      "type": "NoSQL",
-      "level": 0
+      "type": "Microservices",
+      "level": 30
     }
   ]

@@ -10,9 +10,9 @@ export const projects = [
         icon5: '',
         icon6: '',
         link: 'https://github.com/JosephArbelaez/inyoface-API',
-        p1: 'User can create a profile & log in',
-        p2: 'User can upload an image',
-        p3: 'Detected faces display a blue box.',
+        p1: 'User can insert item IDs and it will return item information.',
+        p2: 'User has two options of uploading SKUs.',
+        p3: 'User can compare two excels for comprable SKUs.',
     },
     {
         name: 'Inyoface',
@@ -32,7 +32,7 @@ export const projects = [
     {
         name: 'Littr',
         thumbnail: 'https://s3.amazonaws.com/arbelaez/Bulbasaur.jpg',
-        image: 'https://s3.amazonaws.com/arbelaez/Bulbasaur.jpg',
+        image: '',
         icon1: 'https://s3.amazonaws.com/arbelaez/html48.png',
         icon2: 'https://s3.amazonaws.com/arbelaez/css48.png',
         icon3: 'https://s3.amazonaws.com/arbelaez/angular-48.png',
@@ -47,7 +47,7 @@ export const projects = [
     {
         name: 'Banking App',
         thumbnail: 'https://s3.amazonaws.com/arbelaez/Bulbasaur.jpg',
-        image: 'https://s3.amazonaws.com/arbelaez/Bulbasaur.jpg',
+        image: '',
         icon1: 'https://s3.amazonaws.com/arbelaez/html48.png',
         icon2: 'https://s3.amazonaws.com/arbelaez/css48.png',
         icon3: 'https://s3.amazonaws.com/arbelaez/js48.png',

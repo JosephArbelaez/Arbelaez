@@ -7,7 +7,7 @@ const Card = ({name, thumbnail, image ,icon1, icon2, icon3, icon4, icon5, icon6,
     */
 
     return (
-                <div className = "bg-white v-base hover-bg-lightest-blue dib br3 pa3 ma2 grow bw2 shadow-5 w10 tc">
+                <div className = "bg-white v-base hover-bg-lightest-blue dib br3 pa3 ma2 grow bw2 shadow-5 w5 tc">
                     <h2>{name}</h2>
                     <div className="thumbnail">
                         <img className = "br3 bw2 ba" src={thumbnail} onClick={()=> onThumbnailClick(image)}></img>
