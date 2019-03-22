@@ -1,9 +1,4 @@
 /* Landing Page */
-.buttons {
-  top:60%;
-  left: 43%;
-  align-content: center;
-}
 .buttonEnter {
   background: #407899;
   height: 75px;
@@ -13,27 +8,14 @@
   border-width: 2px;
   border-color:  white;
   border-radius: 6px;
-  margin-bottom: 5%;
 }
-.buttonGame{
-  background: #407899;
-  height: 50px;
-  width: 100px;
-  color: rgba(65, 230, 190, .6);
-  font-size: 1.25em;
-  border-width: 2px;
-  border-color:  rgba(65, 230, 190, .6);
-  border-radius: 15%;
-  display: none;
-}
+
 .landingPage {
   background: #407899;
   color: white;
   height: 100%;
   width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,9 +26,6 @@
   margin-top: 0px;
   text-align: center;
   font-size: 4em;
-  /* position: fixed; */
-  /* top: 40%;
-  left: 35%; */
 }
 
 /* About */
@@ -91,19 +70,16 @@
   margin-top: 0%;
 }
 
-
 /* Navbar */
 .navbar {
   background: #407899;
   text-align: center;
   position: fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
   height: 100%;
   width: 20%;
-  z-index: 1;
+}
+.profile {
+  width: 100%;
 }
 .profileImage {
   border-radius: 15%;
@@ -117,7 +93,6 @@
   margin-top: 10%;
   font-size: 1.25rem;
   font-weight: 600px;
-  display: block;
 }
 .link {
   text-decoration: none;
@@ -129,37 +104,26 @@
   color: aqua;
   text-decoration: underline;
 }
-.menu{
-  background: #407899;
-  top: 2%;
-  left: 2%;
-  position: fixed;
-  visibility: hidden;
-}
-.bar{
-  background: white;
-  width: 35px;
-  height: 5px;
-  margin: 6px 0;
+.navbarContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 /* Content */
-.content {
- top: 0;
- left: 12.5%;
- height: 100%;
- width: 85%;
-}
+
+/* About */
 .lastname {
   color: aqua;
 }
-.subheading {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-left: 5%;
-}
+
+/* Skills */
 .skillbars {
   margin-top:10%;
 }
+
+/* Projects */
 .projectButton {
   width: 70%;
   background-color: white;
@@ -179,9 +143,6 @@
   font-size: 24px;
   margin-bottom: 0%;
   margin-top: 5%;
-}
-.degree {
- margin: 0%;
 }
 .thumbnail {
   cursor: zoom-in;
@@ -230,9 +191,37 @@
   font: 6em;
   margin-top: 30%;
 }
+.content {
+  height: 100%;
+  width: 85%;
+  left: 20%;
+  top: 0%;
+  position: fixed;
+  overflow: auto;
+}
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
   /* Landing Page */
+  .profileImage2 {
+    border-radius: 15%;
+    max-width: 11rem;
+    max-height: 11rem;
+    border: .5em solid rgba(0, 0, 0, .2);
+    cursor: pointer;
+  }
+  .menu{
+    background: #407899;
+    top: 2%;
+    left: 2%;
+    position: fixed;
+    visibility: hidden;
+  }
+  .bar{
+    background: white;
+    width: 35px;
+    height: 5px;
+    margin: 6px 0;
+  }
   .landingName {
     margin-bottom: 5%;
     margin-top: 0px;

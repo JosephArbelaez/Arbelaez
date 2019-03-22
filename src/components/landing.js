@@ -5,9 +5,8 @@ const Landing = ({onChoiceButtonClick}) => {
     return (
         <div className="landingPage">
             <h1 className="landingName">Joseph Arbelaez</h1>
-            <div className="buttons">
+            <div>
                 <button className="buttonEnter" onClick = {() => onChoiceButtonClick('home')}>Enter</button>
-                <button className="buttonGame" onClick = {() => onChoiceButtonClick('game')}>Game</button>
             </div>
         </div>
     );

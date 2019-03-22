@@ -23,11 +23,11 @@ class Content extends React.Component {
 
     render() {
         return (
-                <div>
+                <div className = "content">
                     {
                         this.props.page === 'about' ? 
                         (
-                            <About />
+                            <About profileImageDisplay2={this.props.profileImageDisplay2}/>
                         ) :
                         this.props.page === 'projects' ? 
                         (

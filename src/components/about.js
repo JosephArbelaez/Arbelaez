@@ -3,7 +3,11 @@ import React from 'react';
 class About extends React.Component {
     render(){
         return (
-            <div>
+            <div className="about">
+                <div className="profile">
+                    <img style={{display: this.props.profileImageDisplay2}} className ="profileImage2" src="https://s3.amazonaws.com/arbelaez/ProfileImage.jpg"></img>
+                </div>
+
                 <div className="name">
                     <h1>Joseph <span className="lastName">Arbelaez</span></h1>
                 </div>
