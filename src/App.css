@@ -1,8 +1,8 @@
 /* Landing Page */
 .buttons {
-  top:50%;
-  position: relative;
-  left: 45%;
+  top:60%;
+  left: 43%;
+  align-content: center;
 }
 .buttonEnter {
   background: #407899;
@@ -29,21 +29,24 @@
 .landingPage {
   background: #407899;
   color: white;
-  align-content: center;
   height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }
 .landingName {
   margin-top: 0px;
-  margin-bottom: 5%;
   text-align: center;
   font-size: 4em;
-  position: fixed;
-  top: 40%;
-  left: 35%;
+  /* position: fixed; */
+  /* top: 40%;
+  left: 35%; */
 }
 
 /* About */
@@ -222,22 +225,28 @@
   border-radius: inherit;
   transition: width 2s ease-in;
 }
+.interest{
+  color: #407899;
+  font: 6em;
+  margin-top: 30%;
+}
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
   /* Landing Page */
   .landingName {
-    margin-top: 0px;
     margin-bottom: 5%;
-    text-align: center;
+    margin-top: 0px;
     font-size: 4em;
-    position: fixed;
+    text-align: center;
     top: 25%;
-    left: 10%;
+    left: 0%;
+    align-content: center;
   }
+
   .buttons {
-    top:50%;
-    position: relative;
-    left: 35%;
+    top:70%;
+    align-content: center;
+    left: 27%;
   }
   .buttonEnter {
     background: #407899;
@@ -247,7 +256,7 @@
     font-size: 2em;
     border-width: 2px;
     border-color:  white;
-    border-radius: 50%;
+    border-radius: 6px;;
     margin-bottom: 5%;
   }
   .buttonGame{

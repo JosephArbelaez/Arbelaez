@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Menu = ({onNavbarClick, onMenuPress, menuDisplay}) => {
+const Menu = ({onMenuPress}) => {
 
         return (    
             <div className = "menu" onClick = {() => onMenuPress()} >

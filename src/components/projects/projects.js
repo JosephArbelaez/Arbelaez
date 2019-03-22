@@ -13,6 +13,10 @@ class Projects extends React.Component {
     }
 
     onThumbnailClick = (image) => {
+        if (image === "") {
+            this.setState({lightboxDisplay: 'none'});
+            return;
+        }
         this.setState({lightboxImage: image});
         this.setState({lightboxDisplay: 'block'});
       }

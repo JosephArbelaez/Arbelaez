@@ -31,7 +31,7 @@ export const projects = [
     },
     {
         name: 'Littr',
-        thumbnail: 'https://s3.amazonaws.com/arbelaez/Bulbasaur.jpg',
+        thumbnail: 'https://s3.amazonaws.com/arbelaez/unavailable.png',
         image: '',
         icon1: 'https://s3.amazonaws.com/arbelaez/html48.png',
         icon2: 'https://s3.amazonaws.com/arbelaez/css48.png',
@@ -46,7 +46,7 @@ export const projects = [
     },
     {
         name: 'Banking App',
-        thumbnail: 'https://s3.amazonaws.com/arbelaez/Bulbasaur.jpg',
+        thumbnail: 'https://s3.amazonaws.com/arbelaez/unavailable.png',
         image: '',
         icon1: 'https://s3.amazonaws.com/arbelaez/html48.png',
         icon2: 'https://s3.amazonaws.com/arbelaez/css48.png',
