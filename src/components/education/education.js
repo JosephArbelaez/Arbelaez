@@ -4,8 +4,9 @@ import EducationCard from './educationCard';
 const Education = ({education}) => {
 
         return (
-            <div className="tc" >
-                    <h1>Education</h1>
+            <div>
+                    <h1 className="title">Education</h1>
+                    <div className="cardCollection">
                     {
                         education.map((ed, i) => {
                             return (
@@ -20,6 +21,7 @@ const Education = ({education}) => {
                                 );
                             })
                     }
+                    </div>
             </div>
         );
     }

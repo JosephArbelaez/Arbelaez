@@ -4,9 +4,11 @@ import ExperienceCard from './experienceCard';
 const Experience = ({experiences}) => {
 
         return (
-            <div className="tc" >
-                    <h1>Experience</h1>
+            <div>
+                    <h1 className="title">Experience</h1>
+                    <div className="cardCollection">
                     {
+                        
                         experiences.map((experience, i) => {
                             return (
                                 <ExperienceCard 
@@ -19,6 +21,7 @@ const Experience = ({experiences}) => {
                             );
                         })
                     }
+                    </div>
             </div>
         )
     }

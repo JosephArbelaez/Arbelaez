@@ -96,25 +96,48 @@
 }
 
 /* Projects */
-.projectButton {
-  width: 70%;
-  background-color: white;
+.title {
   text-align: center;
-  border: 5px;
+}
+.card {
+  background: whitesmoke;
+  border-radius: 15px;
+  padding: 3px;
+  width: 300px;
+  box-shadow:rgba(64, 120, 153, .3) 5px 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.cardCollection{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+}
+.projectButton {
+  width: 125px;
+  background-color: white;
+  border: 2px;
   border-style: solid;
   border-radius: 16px;
   border-color: #407899;
   text-decoration: none;
-  display: inline-block;
   font-size: 16px;
   color: #407899;
-  padding-top: 0px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .projectButtonText {
   font-size: 24px;
   margin-bottom: 0%;
   margin-top: 5%;
+}
+.link {
+  display: flex;
+  justify-content: center;
 }
 .thumbnail {
   cursor: zoom-in;
@@ -165,11 +188,11 @@
 }
 .content {
   height: 100%;
-  width: 85%;
+  width: 80%;
   left: 20%;
   top: 0%;
   position: fixed;
-  overflow: auto;
+  overflow: scroll;
 }
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
@@ -178,6 +201,7 @@
     left: 0%;
     width: 100%;
     z-index: 0;
+    height:85%;
   }
 
   /* About Page */

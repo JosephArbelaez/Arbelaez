@@ -26,12 +26,13 @@ class Projects extends React.Component {
       }
     render(){
         return (
-            <div className='tc'>
+            <div>
+                <h1 className="title">Projects</h1>
                 {
                     this.state.lightboxDisplay === 'none' ? 
                     (
-                        <div className = "projectCards">
-                            <h1>Projects</h1>
+                        <div className = "cardCollection">
+                            
                             { 
                                 projects.map((project, i) => {
                                     return (
