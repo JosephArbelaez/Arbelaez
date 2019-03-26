@@ -9,7 +9,6 @@
   border-color:  white;
   border-radius: 6px;
 }
-
 .landingPage {
   background: #407899;
   color: white;
@@ -20,21 +19,23 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
 .landingName {
-  margin-top: 0px;
   text-align: center;
   font-size: 4em;
 }
 
 /* About */
 .description {
-  margin-left: 5%;
   font-style: italic;
-}
-.icon{
   margin-left: 5%;
+  width: 70%;
+}
+.icons{
+  margin-top: 2%;
+  margin-left: 5%;
+}
+.icon {
   margin-right: 2%;
 }
 .name{
@@ -46,28 +47,6 @@
 }
 .lastName{
   color: #407899;
-}
-.email{
-  text-decoration: none;
-  color: #407899;
-  font-weight: 800;
-}
-.email:visited {
-  transition: color .15s ease-in;
-}
-.email:hover   {
-  transition: color .15s ease-in;
-}
-.email:active  {
-  transition: color .15s ease-in;
-}
-.email:focus   {
-  transition: color .15s ease-in;
-  outline: 1px dotted currentColor;
-}
-.personalInfo {
-  margin-left: 5%;
-  margin-top: 0%;
 }
 
 /* Navbar */
@@ -109,13 +88,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-/* Content */
-
-/* About */
-.lastname {
-  color: aqua;
 }
 
 /* Skills */
@@ -201,20 +173,49 @@
 }
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
-  /* Landing Page */
-  .profileImage2 {
-    border-radius: 15%;
-    max-width: 11rem;
-    max-height: 11rem;
-    border: .5em solid rgba(0, 0, 0, .2);
-    cursor: pointer;
+  .content {
+    top: 10%;
+    left: 0%;
+    width: 100%;
+    z-index: 0;
   }
+
+  /* About Page */
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .name{
+    display: flex;
+    left: 0%;
+    top: 10%;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-bottom: 0%;
+    margin-right: 0%;
+    font-size: 1.25rem;
+  }
+  .description {
+    display: flex;
+    width: 80%;
+  }
+  .lastName{
+    color: #407899;
+  }
+  .icons {
+    display: flex;
+  }
+
+  /* Navbar */
   .menu{
     background: #407899;
     top: 2%;
     left: 2%;
     position: fixed;
     visibility: hidden;
+    z-index: 1;
   }
   .bar{
     background: white;
@@ -222,79 +223,10 @@
     height: 5px;
     margin: 6px 0;
   }
-  .landingName {
-    margin-bottom: 5%;
-    margin-top: 0px;
-    font-size: 4em;
-    text-align: center;
-    top: 25%;
-    left: 0%;
-    align-content: center;
-  }
-
-  .buttons {
-    top:70%;
-    align-content: center;
-    left: 27%;
-  }
-  .buttonEnter {
-    background: #407899;
-    height: 75px;
-    width: 200px;
-    color: white;
-    font-size: 2em;
-    border-width: 2px;
-    border-color:  white;
-    border-radius: 6px;;
-    margin-bottom: 5%;
-  }
-  .buttonGame{
-    background: #407899;
-    height: 50px;
-    width: 100px;
-    color: rgba(65, 230, 190, .6);
-    font-size: 1.25em;
-    border-width: 2px;
-    border-color:  rgba(65, 230, 190, .6);
-    border-radius: 15%;
-    display: none;
-  }
   .navbar{
     width: 100%;
     height: 10%;
-    top: 0;
-    left: 0;
-  }
-  .name {
-    margin-top: 20%;
-    font-size: 1.25rem;
-    text-align: center;
-    margin-bottom: 0%;
-    margin-right: 0%;
-  }
-  .profileImage{
-    margin-top: 25%;
-    border: .25em solid #407899;
-    cursor: pointer;
-    text-align: center;
-  }
-  .personalInfo {
-    margin-left: 0%;
-    margin-top: 0%;
-    text-align: center;
-  }
-  .content{
-    top: 0%;
-    left: 0;
-    height: 90%;
-    width:100%;
-    margin-top: 15%;
-    z-index: 0;
-  }
-  .description {
-    margin-left: 0%;
-    text-align: center;
-    font-style: italic;
+    z-index: 1;
   }
   .icon{
     margin-left: 0;

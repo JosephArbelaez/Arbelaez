@@ -3,8 +3,6 @@ import './App.css';
 import Navbar from './navbar/navbar';
 import Landing from './components/landing';
 import Content from './components/content';
-import ScrollArea from 'react-scrollbar';
-import ErrorBoundary from './components/functionality/errorBoundary';
 import 'tachyons';
 
 const initialState = {
