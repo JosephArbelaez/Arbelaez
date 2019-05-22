@@ -3,7 +3,7 @@ import React from 'react';
 class About extends React.Component {
     render(){
         return (
-            <div className="about">
+            <div className="aboutPage">
                 <div className="name">
                     <h1>Joseph <span className="lastName">Arbelaez</span></h1>
                 </div>            

@@ -1,7 +1,7 @@
 import React from 'react';
 import Links from './navbarLinks';
 
-const Navbar = ({onNavbarClick, toggleHidden, display, profileImageDisplay}) => {
+const Navbar = ({onNavbarClick, toggleHidden, display, profileImageDisplay, selectedLink, page}) => {
         return (    
           <div className = "navbar">
             <div className="navbarContent">
@@ -14,7 +14,7 @@ const Navbar = ({onNavbarClick, toggleHidden, display, profileImageDisplay}) => 
                         style={{display: profileImageDisplay}}>
                     </img>
                 </div>
-                <Links onNavbarClick={onNavbarClick} display = {display}/>
+                <Links onNavbarClick={onNavbarClick} display = {display} page={page}/>
                 <div className = "menu" >
                     <div className="bar" onClick = {toggleHidden.bind(this)}></div>
                     <div className="bar" onClick = {toggleHidden.bind(this)}></div>

@@ -10,7 +10,7 @@ const initialState = {
   page: 'about',
   disp: 'block',
   profileImageDisplay: 'inline',
-  profileImageDisplay2: 'none'
+  profileImageDisplay2: 'none',
 }
 
 class App extends Component {
@@ -64,6 +64,7 @@ class App extends Component {
   onNavbarClick = (page) => {
     if (page === 'about') {
       this.setState({page: page});
+      
       if (window.innerWidth < 800){
         this.setState({disp: "none"});
         this.setState({profileImageDisplay: "none" });
@@ -123,7 +124,7 @@ class App extends Component {
       }
     }
     if (page === 'interests') {
-      this.setState({page: page});
+      this.setState({page: page, selectedLink: 'interests'});
       if (window.innerWidth < 800){
         this.setState({disp: "none"});
         this.setState({profileImageDisplay: "none" });
@@ -149,7 +150,7 @@ class App extends Component {
               ) : choice === 'home' ?
               (
                 <div>
-                  <Navbar onNavbarClick={this.onNavbarClick} toggleHidden={this.toggleHidden} display={this.state.disp} profileImageDisplay={this.state.profileImageDisplay}/>
+                  <Navbar onNavbarClick={this.onNavbarClick} toggleHidden={this.toggleHidden} display={this.state.disp} profileImageDisplay={this.state.profileImageDisplay} page={this.state.page}/>
                   <Content page={this.state.page} onThumbnailClick={this.onThumbnailClick} closeThumbnail={this.closeThumbnail} lightboxDisplay={this.state.lightboxDisplay} profileImageDisplay2={this.state.profileImageDisplay2}/>
                 </div>
               )  : 
