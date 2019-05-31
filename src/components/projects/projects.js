@@ -18,7 +18,7 @@ class Projects extends React.Component {
             return;
         }
         this.setState({lightboxImage: image});
-        this.setState({lightboxDisplay: 'block'});
+        this.setState({lightboxDisplay: 'flex'});
       }
     
     closeLightbox = () => {

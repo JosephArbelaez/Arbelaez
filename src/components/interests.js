@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import 'react-loading-bar/dist/index.css';
-import ProgressBar from '../components/functionality/progressbar';
 
 class Interests extends React.Component {
     constructor() {
@@ -40,8 +38,16 @@ class Interests extends React.Component {
             setTimeout(this.setState({percentage: '100%'}), 1990);
         }
         getAction() {
-            const actions = ["Constructing additional Pylons...","Raining on my parade...","Dancing with myself...","Rolling Initiative...","Catching em' all...", "Saying yes and ...?","Fighting evil by moonlight...", "Activating my trap card...",
-                    "Training like a Super Saiyan...", "Facetuning those blemishes...","Buscando mi camisa negra...", "Sashaying away...", "Wavedashing..."];
+            const actions = [
+                "Constructing additional Pylons...",
+                "Rolling Initiative...",
+                "Catching em' all...", 
+                "Fighting evil by moonlight...", 
+                "Activating my trap card...",
+                "Training like a Super Saiyan...", 
+                "Facetuning those blemishes...",
+                "Buscando mi camisa negra...", 
+            ];
             let text = actions[this.randomInt(0, actions.length-1)];
             this.progressTicker();
             return text;
@@ -49,12 +55,9 @@ class Interests extends React.Component {
 
     render(){
         return (
-            <div className="tc interest">
-                <h1>Interests</h1>
-                <h3>Currently: <p className="action-animation">{this.state.action}</p></h3>
-                {/* <div id= "progress">
-                    <ProgressBar percentage={this.state.percentage} />
-                </div> */}
+            <div className="interest">
+                <h1 className="interestTitle">Interests</h1>
+                <h3 className="interestAnimation">Currently: <p className="action-animation">{this.state.action}</p></h3>
             </div>
         );
     }

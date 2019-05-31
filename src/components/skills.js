@@ -4,17 +4,17 @@ import skills from '../jsons/skills.json';
 
 class Skills extends React.Component {
     colors = {
-        bar: 'aqua',
+        bar: '#407899',
         title: {
-            text: 'white',
-            background: '#fff'
+            text: 'black',
+            background: 'white'
         }
     }
     render(){
         return (
-            <div className="skillbars">
-                <h1>Skills</h1>
-                <SkillBar skills={skills} colors = {this.colors}/>
+            <div className="skills">
+                <h1 className="skillTitle">Skills</h1>
+                <SkillBar className="skillbars"skills={skills} colors = {this.colors}/>
             </div>
         );
     }

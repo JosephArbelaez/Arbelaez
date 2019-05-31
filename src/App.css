@@ -1,3 +1,12 @@
+.content {
+  height: 100%;
+  width: 80%;
+  left: 20%;
+  top: 0%;
+  position: fixed;
+  overflow: scroll;
+}
+
 /* Landing Page */
 .buttonEnter {
   background: #407899;
@@ -93,10 +102,12 @@
   color: white;
 }
 /* Skills */
-.skillbars {
-  margin-top:10%;
-}
+.skillTitle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 
+}
 /* Projects */
 .title {
   text-align: center;
@@ -145,12 +156,14 @@
   cursor: zoom-in;
 }
 .lightbox {
-  position: relative;
-  margin-top: 5%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-.lightboxImage{
-  height: 500px;
-  width: 500px;
+.lightboxImage {
+  display: flex;
+  width: 50%;
+  margin: auto;
 }
 .lightboxButton {
   background-color: white;
@@ -160,12 +173,12 @@
   border-radius: 16px;
   border-color: #407899;
   text-decoration: none;
-  display: inline-block;
+  display: flex;
   font-size: 16px;
   color: #407899;
   font-size: 36px;
-  margin-bottom: 0%;
-  margin-top: 5%;
+  margin: auto;
+  margin-top: 2%;
   padding: 1%;
 }
 
@@ -184,18 +197,11 @@
   transition: width 2s ease-in;
 }
 .interest{
-  color: #407899;
+  color: black;
   font: 6em;
-  margin-top: 30%;
+  margin: 20%;
 }
-.content {
-  height: 100%;
-  width: 80%;
-  left: 20%;
-  top: 0%;
-  position: fixed;
-  overflow: scroll;
-}
+
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
   .content {
