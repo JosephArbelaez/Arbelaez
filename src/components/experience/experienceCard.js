@@ -6,7 +6,7 @@ const ExperienceCard = ({role, company, details, dates, location}) => {
         6 icons
     */
     return (
-                    <div className="card">
+                    <div className="cardExperience">
                         <h4 className="mv0 i">{role}</h4>
                         <p className="mv0 i">{company}</p>
                         <p className="mv0 i">{location}</p>

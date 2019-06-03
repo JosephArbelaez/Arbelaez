@@ -129,6 +129,16 @@
   justify-content: center;
   text-align: center;
 }
+.cardExperience {
+  background: whitesmoke;
+  border-radius: 15px;
+  padding: 20px;
+  width: 60%;
+  box-shadow:rgba(64, 120, 153, .3) 5px 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
 .projectButton {
   width: 125px;
   background-color: white;
