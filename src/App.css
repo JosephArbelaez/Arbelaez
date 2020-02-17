@@ -84,7 +84,7 @@
 }
 .link {
   text-decoration: none;
-  color: rgba(0, 0, 0, .2);
+  color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
   cursor: pointer;
 }
