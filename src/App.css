@@ -109,18 +109,19 @@
 
 }
 /* Projects */
-.title {
+.projectTitle {
+  margin-top: 2%;
   text-align: center;
+  flex-direction: column;
 }
 .card {
   background: whitesmoke;
   border-radius: 15px;
   padding: 3px;
-  width: 300px;
+  width: 100%;
   box-shadow:rgba(64, 120, 153, .3) 5px 10px;
   margin: 10px;
   display: flex;
-  flex-direction: column;
 }
 .cardCollection{
   display: flex;

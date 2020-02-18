@@ -142,12 +142,7 @@ class App extends Component {
     return (
       <div>
           {
-            choice ==='empty' ?
-              ( 
-                <Landing 
-                  onChoiceButtonClick={this.onChoiceButtonClick} 
-                /> 
-              ) : choice === 'home' ?
+            choice === 'home' || choice ==='empty' ?
               (
                 <div>
                   <Navbar onNavbarClick={this.onNavbarClick} toggleHidden={this.toggleHidden} display={this.state.disp} profileImageDisplay={this.state.profileImageDisplay} page={this.state.page}/>
