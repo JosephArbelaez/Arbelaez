@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Navbar from './navbar/navbar';
-import Landing from './components/landing';
 import Content from './components/content';
 import 'tachyons';
 
@@ -113,18 +112,6 @@ class App extends Component {
     }
     if (page === 'education') {
       this.setState({page: page});
-      if (window.innerWidth < 800){
-        this.setState({disp: "none"});
-        this.setState({profileImageDisplay: "none" });
-        this.setState({profileImageDisplay2: 'none'});
-      }
-      if (window.innerWidth > 800){
-        this.setState({profileImageDisplay: "inline" });
-        this.setState({profileImageDisplay2: 'none'});
-      }
-    }
-    if (page === 'interests') {
-      this.setState({page: page, selectedLink: 'interests'});
       if (window.innerWidth < 800){
         this.setState({disp: "none"});
         this.setState({profileImageDisplay: "none" });

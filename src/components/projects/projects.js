@@ -27,12 +27,10 @@ class Projects extends React.Component {
     render(){
         return (
             <div>
-                <h1 className="title">Projects</h1>
                 {
                     this.state.lightboxDisplay === 'none' ? 
                     (
                         <div className = "cardCollection">
-                            
                             { 
                                 projects.map((project, i) => {
                                     return (
@@ -52,6 +50,8 @@ class Projects extends React.Component {
                                             p2={projects[i].p2}
                                             p3={projects[i].p3}
                                             onThumbnailClick={this.onThumbnailClick}
+                                            tagline={projects[i].tagline}
+                                            summary={projects[i].summary}
                                         />
                                     );
                                 })
