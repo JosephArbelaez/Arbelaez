@@ -9,22 +9,13 @@ const Card = ({name, thumbnail, image ,icon1, icon2, icon3, icon4, icon5, icon6,
     return (
                 <div className = "projectCard">
                     <div className ="projectDescription">
-                        <div className="projectTitle">
-                            <p>{name}</p>
-                        </div>
-                        <div className="projectTagline">
-                            <p>{tagline}</p>
-                        </div>
-                        <div className="projectSummary">
-                            <p>{summary}</p>
-                        </div>
-                        <div className="projectKeyFeatures">
-                            <ul>
+                            <p className="projectTitle">{name}</p>
+                            <p className="projectSummary">{summary}</p>
+                            <ul className="projectKeyFeatures">
                                 <li>{p1}</li>
                                 <li>{p2}</li>
                                 <li>{p3}</li>
                             </ul>
-                        </div>
                         <div className="projectTech">
                             <img src={icon1}></img>
                             <img src={icon2}></img>
@@ -33,16 +24,10 @@ const Card = ({name, thumbnail, image ,icon1, icon2, icon3, icon4, icon5, icon6,
                             <img src={icon5}></img>
                             <img src={icon6} ></img>
                         </div>
-                        <div className="projectButtons">
-                            <button className="projectButton"> 
-                                <a href={link} className="link"> 
-                                    <p className="projectButtonText">GitHub</p> 
-                                </a> 
-                            </button>
-                        </div>
+                        <a className="projectButton" href={link}>GitHub</a> 
                     </div>
                     <div className="projectThumbnail">
-                        <img src={image} onClick={()=> onThumbnailClick(image)}></img>
+                        <img className="pic" src={image} onClick={()=> onThumbnailClick(image)}></img>
                     </div>
                 </div>
     );

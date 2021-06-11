@@ -8,9 +8,9 @@ class About extends React.Component {
                     <h1>Joseph <span className="lastName">Arbelaez</span></h1>
                 </div>            
                 <div className="description">
-                    <p >Dedicated web developer, with a passion for designing web applications. Developed an
-                    expense reimbursement system, a social platform, and a lawyer / client portal. My hard work
-                    has placed me into two scholastic honor societies, an internship and propelled me through the
+                    <p>I'm a dedicated web developer, with a passion for designing web applications. I've developed an
+                    expense reimbursement system, a library management system, and a lawyer / client portal. My hard work
+                    has placed me into two academic honor societies, WGU's Software Development Degree, and propelled me through the
                     Revature coding boot camp.</p>
                 </div>
                 <div className="icons">

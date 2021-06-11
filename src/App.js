@@ -5,11 +5,9 @@ import Content from './components/content';
 import 'tachyons';
 
 const initialState = {
-  choice: 'empty',
   page: 'about',
   disp: 'block',
-  profileImageDisplay: 'inline',
-  profileImageDisplay2: 'none',
+  profileImageDisplay: 'inline'
 }
 
 class App extends Component {
@@ -23,11 +21,9 @@ class App extends Component {
     if(window.innerWidth < 800){
       this.setState({disp:'none'});
       this.setState({profileImageDisplay: 'none'});
-      this.setState({profileImageDisplay2: 'flex'});
     } else {
       this.setState({disp:'block'});
       this.setState({profileImageDisplay: 'inline'});
-      this.setState({profileImageDisplay2: 'none'});
     }
   }
 
@@ -48,18 +44,6 @@ class App extends Component {
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
 
-  onChoiceButtonClick = (choice) => {
-    if (choice === 'empty') {
-      this.setState({choice: choice});
-    }
-    if (choice === 'game') {
-      this.setState({choice: choice});
-    } 
-    if (choice === 'home') {
-      this.setState({choice: choice});
-    }
-  }
-
   onNavbarClick = (page) => {
     if (page === 'about') {
       this.setState({page: page});
@@ -67,11 +51,9 @@ class App extends Component {
       if (window.innerWidth < 800){
         this.setState({disp: "none"});
         this.setState({profileImageDisplay: "none" });
-        this.setState({profileImageDisplay2: 'flex'});
       }
       if (window.innerWidth > 800){
         this.setState({profileImageDisplay: "inline" });
-        this.setState({profileImageDisplay2: 'none'});
       }
     }
     if (page === 'projects') {
@@ -79,11 +61,9 @@ class App extends Component {
       if (window.innerWidth < 800){
         this.setState({disp: "none"});
         this.setState({profileImageDisplay: "none" });
-        this.setState({profileImageDisplay2: 'none'});
       }
       if (window.innerWidth > 800){
         this.setState({profileImageDisplay: "inline" });
-        this.setState({profileImageDisplay2: 'none'});
       }
     }
     if (page === 'experience') {
@@ -91,11 +71,9 @@ class App extends Component {
       if (window.innerWidth < 800){
         this.setState({disp: "none"});
         this.setState({profileImageDisplay: "none" });
-        this.setState({profileImageDisplay2: 'none'});
       }
       if (window.innerWidth > 800){
         this.setState({profileImageDisplay: "inline" });
-        this.setState({profileImageDisplay2: 'none'});
       }
     }
     if (page === 'skills') {
@@ -103,11 +81,9 @@ class App extends Component {
       if (window.innerWidth < 800){
         this.setState({disp: "none"});
         this.setState({profileImageDisplay: "none" });
-        this.setState({profileImageDisplay2: 'none'});
       }
       if (window.innerWidth > 800){
         this.setState({profileImageDisplay: "inline" });
-        this.setState({profileImageDisplay2: 'none'});
       }
     }
     if (page === 'education') {
@@ -115,7 +91,7 @@ class App extends Component {
       if (window.innerWidth < 800){
         this.setState({disp: "none"});
         this.setState({profileImageDisplay: "none" });
-        this.setState({profileImageDisplay2: 'none'});
+
       }
       if (window.innerWidth > 800){
         this.setState({profileImageDisplay: "inline" });
@@ -125,21 +101,10 @@ class App extends Component {
   }
 
   render() {
-    const { choice , page, disp, profileImageDisplay, lightboxDisplay} = this.state;
     return (
-      <div>
-          {
-            choice === 'home' || choice ==='empty' ?
-              (
-                <div>
-                  <Navbar onNavbarClick={this.onNavbarClick} toggleHidden={this.toggleHidden} display={this.state.disp} profileImageDisplay={this.state.profileImageDisplay} page={this.state.page}/>
-                  <Content page={this.state.page} onThumbnailClick={this.onThumbnailClick} closeThumbnail={this.closeThumbnail} lightboxDisplay={this.state.lightboxDisplay} profileImageDisplay2={this.state.profileImageDisplay2}/>
-                </div>
-              )  : 
-              (
-                <div></div>
-              )
-          }
+      <div className="app">
+        <Navbar onNavbarClick={this.onNavbarClick} toggleHidden={this.toggleHidden} display={this.state.disp} profileImageDisplay={this.state.profileImageDisplay} page={this.state.page}/>
+        <Content page={this.state.page} onThumbnailClick={this.onThumbnailClick} closeThumbnail={this.closeThumbnail} lightboxDisplay={this.state.lightboxDisplay} profileImageDisplay={this.state.profileImageDisplay}/>
       </div>
     );
   }

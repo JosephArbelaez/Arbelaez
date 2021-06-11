@@ -9,13 +9,12 @@
 
 .title {
   font: Roboto,Helvetica,sans-serif;
-  font-size: 2rem;
 }
 
 /* About */
 .description {
   font-style: italic;
-  margin-left: 5%;
+  margin: 5%;
   width: 70%;
 }
 .icons{
@@ -44,40 +43,42 @@
   height: 100%;
   width: 20%;
 }
-.profile {
-  width: 100%;
-}
-.profileImage {
-  border-radius: 15%;
-  max-width: 100%;
-  max-height: 13rem;
-  border: .5em solid rgba(0, 0, 0, .2);
-  margin-top: 35%;
-  cursor: pointer;
-}
-.navbarLinks {
-  margin-top: 10%;
-  font-size: 1.25rem;
-  font-weight: 600px;
-}
-.link {
-  text-decoration: none;
-  color: white;
-  font: Roboto,Helvetica,sans-serif;
-  cursor: pointer;
-}
-.link:hover {
-  color: aqua;
-  text-decoration: underline;
-}
 .navbarContent {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.selectedLink {
+.profile {
+  width: 100%;
+}
+.profileImage {
+  max-width: 100%;
+  max-height: 11rem;
+  margin-top: 20%;
+  cursor: pointer;
+}
+.navbarLinks {
+  font-size: 1.25rem;
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+}
+.link {
+  margin: 0%;
+  text-decoration: none;
   color: white;
+  font: Roboto,Helvetica,sans-serif;
+  cursor: pointer;
+  padding: 5%;
+}
+.link:hover {
+  color: aqua;
+  text-decoration: underline;
+}
+
+.selectedLink {
+  background-color: #284e64;
 }
 /* Skills */
 .skillTitle {
@@ -92,15 +93,12 @@
   font: Roboto,Helvetica,sans-serif;
 }
 .projectTitle {
-  font-weight: 400;
   font-size: 30px;
   line-height: 1;
   flex-direction: column; 
 }
 .projectTagline{
   font-size: 18px;
-  font-weight: 300;
-  line-height: 1.5;
   text-transform: none;
 }
 .projectSummary{
@@ -111,7 +109,8 @@
 }
 .projectCard {
   border-radius: 15px;
-  padding: 3px;
+  
+  font-size: small;
   width: 90%;
   margin: 10px;
   display: flex;
@@ -140,15 +139,16 @@
   flex-direction: column;
 }
 .projectButton {
+  width: 30%;
+  text-decoration: none;
   background-color: #407899;
-  font-size: 24px;
-  width: 100px;
+  text-align: center;
   color: white;
-}
-.projectButtonText {
-  margin: 2%;
-  padding: 5%;
-  align-items: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4px;
+  font-size: x-large;
 }
 .link {
   display: flex;
@@ -159,6 +159,12 @@
   width: 80%;
   margin-top: 5%;
   margin-left: 10px;
+  height: 200px;
+  
+}
+.pic{
+  box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+  display: block;
 }
 .lightbox {
   justify-content: center;
@@ -190,12 +196,55 @@
 
 @media only screen and (max-width: 800px) {
   /* For mobile phones: */
+    .app{
+      display: flex;
+      flex-direction: column;
+    }
+    /* Navbar */
+    .navbar{
+      width: 100%;
+      height: 12%;
+    }
+    .navbarContent{
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+
+    }
+    .menu{
+      background: #407899;
+      position: fixed;
+      visibility: visible;
+      top: 0%;
+      left: 0%;
+      padding: 2%
+    }
+    .bar{
+      background: white;
+      width: 35px;
+      height: 5px;
+      margin: 6px 0;
+      visibility: visible;
+    }
+    .navbarLinks{
+      top:45px;
+      left:0;
+      width: 100%;
+      font-size: 1rem;
+      position: absolute;
+      background-color:  #407899;
+    }
+    .link{
+      color:  rgba(255, 255, 255, 1);
+    }
+
   .content {
     top: 10%;
     left: 0%;
     width: 100%;
-    z-index: 0;
-    height:85%;
+    position: absolute;
+    z-index: -1;
   }
 
   /* About Page */
@@ -226,26 +275,11 @@
     display: flex;
   }
 
-  /* Navbar */
-  .menu{
-    background: #407899;
-    top: 2%;
-    left: 2%;
-    position: fixed;
-    visibility: hidden;
-    z-index: 1;
+  .lightboxImage{
+    height: 80%;
+    width: 80%;
   }
-  .bar{
-    background: white;
-    width: 35px;
-    height: 5px;
-    margin: 6px 0;
-  }
-  .navbar{
-    width: 100%;
-    height: 10%;
-    z-index: 1;
-  }
+
   .icon{
     margin-left: 0;
     margin-right: 2%;
@@ -255,38 +289,38 @@
     margin-right: 0;
     text-align: center;
   }
-  .navbarLinks{
-    top:0;
-    left:0;
+
+  /* Project */
+  .projectDescription{
+    top: 10%;
     width: 100%;
-    position: fixed;
-    font-size: 1.25rem;
-    font-weight: 600px;
-    z-index: 1;
-    background-color:  #407899;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
   }
-  .link{
-    color:  rgba(255, 255, 255, 1);;
-    z-index: 2;
+  .projectTitle{
+    text-align: center;
+    margin: 4%;
+    width: 100%;
+    padding: 1%;
+    color: white;
+    background-color: #407899;
   }
-  .menu{
-    background: #407899;
-    top: 2%;
-    left: 2%;
-    position: fixed;
-    visibility: visible;
-    z-index: 2;
+  .projectButton{
+    width: 30%;
+    text-decoration: none;
+    background-color: #407899;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
   }
-  .bar{
-    background: white;
-    width: 35px;
-    height: 5px;
-    margin: 6px 0;
-    visibility: visible;
-    z-index: 2;
+  .projectThumbnail{
+    display: none;
   }
-  .lightboxImage{
-    height: 80%;
-    width: 80%;
+  .pic {
+    display: none;
   }
 }

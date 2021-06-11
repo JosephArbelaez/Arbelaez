@@ -1,10 +1,10 @@
 import React from 'react';
 import Links from './navbarLinks';
 
-const Navbar = ({onNavbarClick, toggleHidden, display, profileImageDisplay, selectedLink, page}) => {
+const Navbar = ({onNavbarClick, toggleHidden, display, profileImageDisplay, page}) => {
         return (    
           <div className = "navbar">
-            <div className="navbarContent">
+            <div className= "navbarContent">
                 <div>
                     <img 
                         className ="profileImage" 
@@ -14,12 +14,12 @@ const Navbar = ({onNavbarClick, toggleHidden, display, profileImageDisplay, sele
                         style={{display: profileImageDisplay}}>
                     </img>
                 </div>
-                <Links onNavbarClick={onNavbarClick} display = {display} page={page}/>
-                <div className = "menu" >
-                    <div className="bar" onClick = {toggleHidden.bind(this)}></div>
-                    <div className="bar" onClick = {toggleHidden.bind(this)}></div>
-                    <div className="bar" onClick = {toggleHidden.bind(this)}></div>
+                <div className = "menu" onClick = {toggleHidden.bind(this)}>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
                 </div>
+                <Links onNavbarClick={onNavbarClick} display = {display} page={page}/>
             </div>
           </div>
       );

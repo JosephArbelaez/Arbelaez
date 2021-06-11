@@ -1,35 +1,17 @@
 import React from 'react';
 import Card from './card';
-import Lightbox from '../functionality/Lightbox';
 import { projects } from './projectList';
 class Projects extends React.Component {
     constructor() {
         super();
         this.state = {
-            projects: projects,
-            lightboxImage:'',
-            lightboxDisplay: 'none'
+            projects: projects
         }
     }
 
-    onThumbnailClick = (image) => {
-        if (image === "") {
-            this.setState({lightboxDisplay: 'none'});
-            return;
-        }
-        this.setState({lightboxImage: image});
-        this.setState({lightboxDisplay: 'flex'});
-      }
-    
-    closeLightbox = () => {
-        this.setState({lightboxDisplay: 'none'});
-      }
     render(){
         return (
             <div>
-                {
-                    this.state.lightboxDisplay === 'none' ? 
-                    (
                         <div className = "cardCollection">
                             { 
                                 projects.map((project, i) => {
@@ -57,12 +39,6 @@ class Projects extends React.Component {
                                 })
                             }
                         </div>
-                    ) :
-                    (    
-                        <Lightbox lightboxImage={this.state.lightboxImage} closeLightbox={this.closeLightbox}/>
-                    ) 
-
-                }
             </div>
         );
     }
