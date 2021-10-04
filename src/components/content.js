@@ -2,7 +2,6 @@ import React from 'react';
 import About from './about';
 import Projects from './projects/projects'
 import Education from './education/education';
-import Skills from './skills';
 import Interests from './interests';
 import Experience from './experience/experience';
 import { projects } from './projects/projectList';
@@ -40,10 +39,6 @@ class Content extends React.Component {
                         this.props.page === 'education' ? 
                         (
                             <Education education={education}/>
-                        ) :
-                        this.props.page === 'skills' ? 
-                        (
-                            <Skills />
                         ) :
                         this.props.page === 'interests' ? 
                         (

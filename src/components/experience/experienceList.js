@@ -1,6 +1,6 @@
 export const experiences = [
     {
-        role: 'Supplier API Integration Analyst',
+        role: 'API Integration Analyst',
         company: 'Walmart / Cognizant',
         details: 'The core of my job consists of assisting Drop Ship Vendors, Owned Suppliers and Content Service Providers integrate onto the Walmart.com website. This typically beings with a kick off meeting where we discuss and compare goals. Afterwards, we assist them in creating their first XMLs that follow our XSD schemas. We\'ll also handle cases as they crop up in our Salesforce queue. These typically involve problems with item setup or difficulties with Walmart.com',
         dates: 'June 2018 - Present',
